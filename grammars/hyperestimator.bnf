@@ -1,0 +1,5 @@
+<parameters>::= <opt> <batch_size>
+<opt>::= <opt_type> <lr>
+<opt_type>::=  adam | rmsprop
+<lr> ::= 0.000001 | 0.00001 | 0.0001 | 0.001 
+<batch_size> ::= 16| 32 | 64 | 128

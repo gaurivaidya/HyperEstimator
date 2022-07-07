@@ -1,0 +1,21 @@
+CACHE:                  False
+CODON_SIZE:             256
+CROSSOVER:              variable_onepoint
+CROSSOVER_PROBABILITY:  0.9
+DEBUG:                  False
+GENERATIONS:            5
+MAX_GENOME_LENGTH:      100
+GRAMMAR_FILE:           hyperestimator.bnf
+INITIALISATION:         rhh
+INVALID_SELECTION:      False
+MAX_INIT_TREE_DEPTH:    5
+MAX_TREE_DEPTH:         20
+MUTATION:               int_flip_per_codon
+MUTATION_PROBABILITY:   0.01
+POPULATION_SIZE:        10
+FITNESS_FUNCTION:       final_fitness
+REPLACEMENT:            steady_state 
+SELECTION:              tournament 
+TOURNAMENT_SIZE:        2
+ELITE SIZE:             1
+VERBOSE:                True
