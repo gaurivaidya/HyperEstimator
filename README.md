@@ -13,4 +13,5 @@ All the requirements are mentioned in requirements file and can be installed as 
 pip3 install -r requirements.txt
 ```
 ## Contact
-Your suggestions are most welcome! Kindly contact HyperEstimator team via [Github](https://github.com/gauriivaidya/HyperEstimator/issues).
+Your suggestions are most welcome! 
+Kindly contact HyperEstimator team via [Github](https://github.com/gauriivaidya/HyperEstimator/issues).
