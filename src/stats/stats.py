@@ -147,16 +147,16 @@ def get_soo_stats(individuals, end):
 
     if end and not params['SILENT']:
         print_final_stats()
-    # if stats['gen'] ==5:        
-    #         for i in individuals:
-    #             guess = str(i.phenotype)
-    #             clean = re.sub('[^A-Za-z0-9]+\.[0-9]+', ' ', guess)
-    #             a = clean.split()
-    #             with open('ge_stats.csv', 'w',newline='') as f:
-    #                 writer=csv.writer(f)
-    #                 writer.writeroww([a[0],a[1], a[2], str(i.fitness)])
-    #                 f.close()
-
+    # if stats['gen'] == 4:        
+    #     for i in individuals:
+    #         guess = str(i.phenotype)
+    #         clean = re.sub('\[[^A-Za-z0-9]+\.[0-9]+]', ' ', guess)
+    #         clean = clean.strip("[]")
+    #         a = clean.split()
+    #         with open('hyperestimator.csv', 'w',newline='') as f:
+    #             writer=csv.writer(f)
+    #             writer.writerow([a[0],a[1], a[2], str(i.fitness)])
+    #             f.close()
 
 
 def get_moo_stats(individuals, end):
@@ -335,15 +335,16 @@ def update_stats(individuals, end):
     stats['max_tree_nodes'] = np.nanmax(nodes)
     stats['ave_tree_nodes'] = np.nanmean(nodes)
     stats['min_tree_nodes'] = np.nanmin(nodes)
-    if stats['gen'] ==5:        
-            for i in individuals:
-                guess = str(i.phenotype)
-                clean = re.sub('[^A-Za-z0-9]+\.[0-9]+', ' ', guess)
-                a = clean.split()
-                with open('ge_stats.csv', 'w',newline='') as f:
-                    writer=csv.writer(f)
-                    writer.writeroww([a[0],a[1], a[2], str(i.fitness)])
-                    f.close()
+    if stats['gen'] == 4:        
+        for i in individuals:
+            guess = str(i.phenotype)
+            clean = re.sub('\[[^A-Za-z0-9]+\.[0-9]+]', ' ', guess)
+            # clean = clean.strip("[]")
+            a = clean.split()
+            with open('hyperestimator.csv', 'w',newline='') as f:
+                writer=csv.writer(f)
+                writer.writerow([a[0],a[1], a[2], str(i.fitness).strip("[]")])
+                f.close()
 
     if not hasattr(params['FITNESS_FUNCTION'], 'multi_objective'):
         # Fitness Stats
@@ -364,15 +365,6 @@ def print_generation_stats():
     print("______\n")
     for stat in sorted(stats.keys()):
         print(" ", stat, ": \t", stats[stat])
-        f = open("stats_intermediate.txt",'a')
-        f.writelines(str(stat) + "\t" + str(stats[stat])) 
-        f.writelines("\n") 
-        f.close()
-    print("\n")
-    f = open("stats_intermediate.txt",'a')
-    # f.writelines(str(stat) + "\t" + str(stats[stat])) 
-    f.writelines("\n") 
-    f.close()
 
 
 

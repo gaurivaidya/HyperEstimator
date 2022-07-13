@@ -13,7 +13,7 @@ MAX_TREE_DEPTH:         20
 MUTATION:               int_flip_per_codon
 MUTATION_PROBABILITY:   0.01
 POPULATION_SIZE:        10
-FITNESS_FUNCTION:       final_fitness
+FITNESS_FUNCTION:       hyperestimator_fitness
 REPLACEMENT:            steady_state 
 SELECTION:              tournament 
 TOURNAMENT_SIZE:        2
