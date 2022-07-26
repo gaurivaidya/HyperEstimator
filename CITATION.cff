@@ -1,0 +1,7 @@
+@inproceedings{Vaidya2022,
+   author = {Gauri Vaidya and Luise Ilg and Meghana Kshirsagar and Enrique Naredo and Conor Ryan},
+   journal = {19th International Conference on Smart Business Technologies},
+   pages = {57-68},
+   title = {HyperEstimator: Evolving Computationally Efficient CNN Models with Grammatical Evolution},
+   year = {2022},
+}
