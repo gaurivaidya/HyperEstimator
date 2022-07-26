@@ -1,4 +1,4 @@
-cff-version: 1.1
+cff-version: 1.0
 message: "If you use this approach, please cite it as below."
 type: article
 authors:
@@ -18,4 +18,28 @@ year: 2022
 start: 57 #  page number
 end: 68 #  page number
 title: "HyperEstimator: Evolving Computationally Efficient CNN Models with Grammatical Evolution"
+
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+preferred-citation:
+  type: article
+  authors:
+   - family-names: "Vaidya"
+    given-names: "Gauri"
+  - family-names: "Ilg"
+    given-names: "Luise"
+  - family-names: "Kshirsagar"
+    given-names: "Meghana"
+  - family-names: "Naredo"
+    given-names: "Enrique"
+  - family-names: "Ryan"
+    given-names: "Conor"
+  doi: "10.5220/0011324800003280"
+  journal: "Proceedings of the 19th International Conference on Smart Business Technologies - ICSBT"
+  start: 57 #  page number
+  end: 68 #  page number
+  title: "HyperEstimator: Evolving Computationally Efficient CNN Models with Grammatical Evolution"
+  issue: 1
+  volume: 1
+  year: 2022
  
